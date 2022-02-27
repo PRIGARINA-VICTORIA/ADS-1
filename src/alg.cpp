@@ -1,6 +1,6 @@
 // Copyright 2022 NNTU-CS
-#include <cstdint>
 #include "alg.h"
+#include <cstdint>
 #include <climits>
 
 
@@ -12,13 +12,11 @@ bool num = true;
 			if (value % i == 0) {
 				num = false;
 				break;
-			}
-			else {
+			} else {
 				num = true;
 			}
 		}
-	}
-	else {
+	} else {
 		num = false;
 	}
 	return num;
@@ -43,10 +41,10 @@ uint64_t nextPrime(uint64_t value) {
   uint64_t res = 0;
 	for (uint64_t i = value + 1; i <= INT_MAX; i++) {
 		if (checkPrime(i)) {
-			res = i; 
+			res = i;
 			break;
 		}
-	}
+  }
 	return res;
 }
 uint64_t sumPrime(uint64_t hbound) {
